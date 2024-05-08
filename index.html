@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<title>CRUD - JS </title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+</head>
+<body>
+    <form class="row gy-2 gx-3 align-items-center" id="enviar" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" placeholder="insira um nome">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="insira o email para cadastro">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Tel:</label>
+        <input type="text" class="form-control" id="telefone" placeholder="insira o numero de tel">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Cartão SUS:</label>
+        <input type="text" class="form-control" id="sus" placeholder="insira o numero do cartão do SUS ">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Data de nascimento:</label>
+        <input type="text" class="form-control" id="data_nascimento" placeholder="insira a data de nascimento">
+      </div>
+      <button type="submit" class="btn btn-secondary"  onsubmit="return cadastro();">Salvar</button>
+    </form>
+
+</body>
+<script>
+let lista = {
+    nome:'',
+    email:'',
+    tel:'',
+    cartao:'',
+    data:''
+}
+let pegarValores;
+
+let listaCadastro = []
+
+function cadastro(){
+
+    pegarValores = document.querySelectorAll('.form-control')
+    lista.nome = pegarValores[0].value 
+    lista.email = pegarValores[1].value 
+    lista.tel = pegarValores[2].value 
+    lista.cartao = pegarValores[3].value
+    lista.data = pegarValores[4].value
+
+   console.log(lista.nome +' ----' + lista.email)
+
+      
+    return true
+}
+
+
+
+
+
+</script>
+
+</html>
